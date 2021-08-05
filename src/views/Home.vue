@@ -52,7 +52,7 @@ import CountrySelect from '@/components/CountrySelect.vue';
       const data = await this.fetchCovidData();
       this.title = 'Global';
       this.stats = data.Global;
-      /* this.loading = false; */
+      this.loading = false;
     },
   },
   async created() {
