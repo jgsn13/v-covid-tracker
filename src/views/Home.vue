@@ -8,7 +8,7 @@
 
     <button v-if="stats.Country"
     @click="clearCountryData"
-    class="p-3 mt-10 text-white bg-blue-700 rounded focus:outline-none hover:bg-blue-500">
+    class="p-3 my-10 text-white bg-blue-700 rounded focus:outline-none hover:bg-blue-500">
       Clear Country
     </button>
   </main>
