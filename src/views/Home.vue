@@ -5,6 +5,12 @@
     <DataBoxes :stats="stats" />
 
     <CountrySelect @get-country="getCountryData" :countries="countries" />
+
+    <button v-if="stats.Country"
+    @click="clearCountryData"
+    class="p-3 mt-10 text-white bg-blue-700 rounded focus:outline-none hover:bg-blue-500">
+      Clear Country
+    </button>
   </main>
 
   <main class="flex flex-col justify-center text-center align-middle" v-else>
@@ -40,6 +46,13 @@ import CountrySelect from '@/components/CountrySelect.vue';
     getCountryData(country: any): void {
       this.stats = country;
       this.title = country.Country;
+    },
+    async clearCountryData() {
+      this.loading = true;
+      const data = await this.fetchCovidData();
+      this.title = 'Global';
+      this.stats = data.Global;
+      /* this.loading = false; */
     },
   },
   async created() {

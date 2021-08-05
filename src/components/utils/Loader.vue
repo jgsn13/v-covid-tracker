@@ -47,15 +47,15 @@ section {
   align-items: center;
   min-height: 30vh;
   background: transparent;
-  animation: animateBg 10s linear infinite;
+  animation: animateBg 5s linear infinite;
 }
 
 @keyframes animateBg {
   0% {
-    filter: drop-shadow(0 0 1px #06ba87);
+    filter: drop-shadow(0 0 0.5px #06ba87);
   }
   100% {
-    filter: drop-shadow(0 0 4px #06f0ad);
+    filter: drop-shadow(0 0 1px #06f0ad);
   }
 }
 
@@ -84,8 +84,8 @@ section .loader span::before {
   border-radius: 50%;
   background: #047857;
   box-shadow: 0 0 10px #cccccc;
-  animation: animate 2s linear infinite;
-  animation-delay: calc(0.1s * var(--i));
+  animation: animate 0.5s linear infinite;
+  animation-delay: calc(0.05s * var(--i));
 }
 
 @keyframes animate {
